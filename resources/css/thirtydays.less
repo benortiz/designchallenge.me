@@ -42,6 +42,9 @@
 @body-copy-font: 'Source Sans Pro', sans-serif;
 @heading-font: 'Source Sans Pro', sans-serif;
 @content-size: 18px;
+
+@nav-row-space: 45px;
+
 /*
 	Body Styles
 */
@@ -62,8 +65,8 @@ header {
 	background-color: @background-color;
 	.column(5);
 	.push(1);
-	margin-top: 72px;
-	margin-bottom: 45px;
+	margin-top: @nav-row-space * 1.6;
+	margin-bottom: @nav-row-space;
 
 	h1 {
 		font-size: 32px;
@@ -72,8 +75,31 @@ header {
 	}
 }
 
+	span {
+		&.top {
+			color:@primary;
+		}
+
+		&.bottom {
+			color:@secondary;
+		}
+}
+
 #nav {
-	margin-bottom: 45px;
+	margin-bottom: @nav-row-space;
+
+	a {
+		color: @body-copy-color;
+		text-decoration: none;
+
+		&:hover {
+			color: lighten(@body-copy-color, 20%);
+		}
+
+		&:visited {
+			color: lighten(@body-copy-color, 20%);
+		}
+	}
 }
 
 .type {
