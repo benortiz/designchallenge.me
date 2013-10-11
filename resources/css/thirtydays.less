@@ -33,7 +33,7 @@
 @secondary: #7e0115;
 @background-color: #FFFFFF;
 
-@body-copy-color: #000000;
+@body-copy-color: #666666;
 @heading-color: #000000;
 
 /*
@@ -57,7 +57,6 @@ body {
 
 #wrapper {
 	width: 500px;
-	padding-left: 50px;
 	z-index:100;
 	background-color: @background-color;
 }
@@ -91,15 +90,15 @@ header {
 	margin-bottom: @nav-row-space;
 
 	a {
-		color: @body-copy-color;
+		color: @heading-color;
 		text-decoration: none;
 
 		&:hover {
-			color: lighten(@body-copy-color, 20%);
+			color: lighten(@heading-color, 20%);
 		}
 
 		&:visited {
-			color: lighten(@body-copy-color, 20%);
+			color: @heading-color;
 		}
 	}
 }

@@ -30,6 +30,17 @@ function addConverted() {
 	var wordDay = window.num2str.convert(daysSince);
 
 	header.innerHTML = "<span class=\"top\">" +wordDay+ " day</span><br /><span class=\"bottom\">design challenge.</span>";
+	offCenter();
+}
+
+function offCenter() {
+	var browserWidth = window.innerWidth;
+	var halfWidth = browserWidth / 2;
+	var content = document.getElementById('wrapper');
+	var contentWidth = content.offsetWidth;
+	var padding = halfWidth - contentWidth;
+	content.style.paddingLeft = padding + "px";
+
 }
 
 window.onload = addConverted;
